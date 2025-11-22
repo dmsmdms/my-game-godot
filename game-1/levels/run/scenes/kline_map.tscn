@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2cu741p85i28"]
+
+[ext_resource type="PackedScene" uid="uid://ctofmpdy2obrx" path="res://assets/scenes/kline.tscn" id="1_mkj5h"]
+[ext_resource type="Script" uid="uid://4cgr318dqe4" path="res://levels/run/scenes/kline_map.gd" id="1_w8huf"]
+
+[node name="KLineMap" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 300.0
+script = ExtResource("1_w8huf")
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ChangePrice" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="ChangePercent" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="Graph" parent="." instance=ExtResource("1_mkj5h")]
+layout_mode = 1
+
+[connection signal="kdata_received" from="Graph/Binance" to="." method="_on_kdata_received"]
+
+[editable path="Graph"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0bh00c8l4uko"]
+
+[ext_resource type="Script" uid="uid://cvcrm4ev0o7kc" path="res://assets/scenes/menu_button.gd" id="1_hcku6"]
+[ext_resource type="Theme" uid="uid://dqkuckc5ooen3" path="res://assets/theme.tres" id="1_ii6q0"]
+
+[node name="MenuButton" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("1_ii6q0")
+flat = true
+script = ExtResource("1_hcku6")
+metadata/color = Color(0, 0, 0, 1)
+metadata/type = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -24.0
+offset_right = 20.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ii6q0")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

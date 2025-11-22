@@ -1,0 +1,45 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://2yd2dcvkslbk"
+path.s3tc="res://.godot/imported/player_texture_normal512.png-a0663750e30395ee63434cf3484c232b.s3tc.ctex"
+path.etc2="res://.godot/imported/player_texture_normal512.png-a0663750e30395ee63434cf3484c232b.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "7bba539180be992c1e39707a9e7596a2"
+}
+
+[deps]
+
+source_file="res://levels/run/models/player_texture_normal512.png"
+dest_files=["res://.godot/imported/player_texture_normal512.png-a0663750e30395ee63434cf3484c232b.s3tc.ctex", "res://.godot/imported/player_texture_normal512.png-a0663750e30395ee63434cf3484c232b.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://levels/run/models/player_texture_normal512.png"
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

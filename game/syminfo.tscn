@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba7vk2qe30yhi"]
+
+[ext_resource type="Texture2D" uid="uid://byrxd6kba2vvj" path="res://assets/btc512.png" id="1_is0m5"]
+
+[node name="SymInfo" type="SymInfo"]
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 23.0
+offset_right = 199.0
+offset_bottom = 50.0
+text = "BTC Bitcoin"
+
+[node name="icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 83.0
+texture = ExtResource("1_is0m5")
+expand_mode = 1
+stretch_mode = 4

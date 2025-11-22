@@ -1,0 +1,7 @@
+.godot
+.editorconfig
+*.dblite
+*.so
+*.uid
+*.os
+*.apk*

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://chkgpnafik0i2"]
+
+[ext_resource type="Script" uid="uid://dr88epi2m0lnn" path="res://assets/scenes/binance.gd" id="1_te4tr"]
+
+[node name="Binance" type="HTTPRequest"]
+script = ExtResource("1_te4tr")
+metadata/symbol = "btc"
+
+[connection signal="request_completed" from="." to="." method="_on_request_completed"]

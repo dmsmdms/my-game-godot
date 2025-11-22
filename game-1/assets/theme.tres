@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dqkuckc5ooen3"]
+
+[ext_resource type="FontFile" uid="uid://c4yna6vfkycou" path="res://assets/fonts/ChakraPetch-SemiBold.ttf" id="1_5x3i2"]
+
+[resource]
+default_font = ExtResource("1_5x3i2")
+default_font_size = 36

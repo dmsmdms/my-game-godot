@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://h3hvldj0433a"]
+
+[ext_resource type="Script" uid="uid://d0kcvs8ae11x0" path="res://levels/run/scenes/input.gd" id="1_bs5rc"]
+[ext_resource type="Texture2D" uid="uid://c5s0l62ppi4ve" path="res://levels/run/icons/pause.png" id="2_y5leg"]
+
+[node name="Input" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bs5rc")
+
+[node name="Pause" type="TouchScreenButton" parent="."]
+position = Vector2(50, 50)
+texture_normal = ExtResource("2_y5leg")
+visibility_mode = 1
+
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]

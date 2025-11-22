@@ -1,0 +1,8 @@
+[configuration]
+entry_symbol = "init"
+compatibility_minimum = "4.5"
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 = "./libscript.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "./libscript.linux.template_release.x86_64.so"

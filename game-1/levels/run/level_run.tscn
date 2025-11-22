@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxtb1bbt481vo"]
+
+[ext_resource type="PackedScene" uid="uid://lfeg5wvhp0yp" path="res://levels/run/scenes/cube_world.tscn" id="2_q6dde"]
+[ext_resource type="PackedScene" uid="uid://h3hvldj0433a" path="res://levels/run/scenes/input.tscn" id="2_ux2mo"]
+[ext_resource type="PackedScene" uid="uid://b7g4ndo0hv63v" path="res://levels/run/scenes/player.tscn" id="3_q6dde"]
+[ext_resource type="PackedScene" uid="uid://c2cu741p85i28" path="res://levels/run/scenes/kline_map.tscn" id="4_coujb"]
+[ext_resource type="PackedScene" uid="uid://di63y6nrjoees" path="res://levels/run/scenes/menu.tscn" id="5_o2akp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cvgma"]
+sky_top_color = Color(0.18431373, 0.6156863, 0.8745098, 1)
+sky_horizon_color = Color(0.6051616, 0.7130047, 0.7806518, 1)
+ground_bottom_color = Color(0.09803922, 0.09803922, 0.10980392, 1)
+ground_horizon_color = Color(0.6051616, 0.7130047, 0.7806518, 1)
+
+[sub_resource type="Sky" id="Sky_0vppy"]
+sky_material = SubResource("ProceduralSkyMaterial_cvgma")
+
+[sub_resource type="Environment" id="Environment_ux2mo"]
+background_mode = 2
+sky = SubResource("Sky_0vppy")
+tonemap_mode = 2
+
+[node name="LevelRun" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ux2mo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.78039217, 0.9607843, 0.972549, 1)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("3_q6dde")]
+
+[node name="CubeWorld" parent="." instance=ExtResource("2_q6dde")]
+
+[node name="Input" parent="." instance=ExtResource("2_ux2mo")]
+
+[node name="KLineMap" parent="." instance=ExtResource("4_coujb")]
+
+[node name="Menu" parent="." instance=ExtResource("5_o2akp")]
+
+[connection signal="paused" from="Input" to="Menu" method="_on_input_paused"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://lfeg5wvhp0yp"]
+
+[ext_resource type="Script" uid="uid://do4sc1iayv1s2" path="res://levels/run/scenes/cube_world.gd" id="1_tvs0j"]
+
+[node name="CubeWorld" type="Node3D"]
+script = ExtResource("1_tvs0j")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctofmpdy2obrx"]
+
+[ext_resource type="Script" uid="uid://btxnsje2vca5s" path="res://assets/scenes/kline.gd" id="1_ap8r4"]
+[ext_resource type="PackedScene" uid="uid://chkgpnafik0i2" path="res://assets/scenes/binance.tscn" id="2_kdkwu"]
+
+[node name="Kline" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ap8r4")
+metadata/kwidth = 5.0
+
+[node name="Binance" parent="." instance=ExtResource("2_kdkwu")]
+
+[connection signal="kdata_received" from="Binance" to="." method="_on_kdata_received"]

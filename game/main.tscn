@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://buaq673iyr04d"]
+
+[ext_resource type="PackedScene" uid="uid://ba7vk2qe30yhi" path="res://syminfo.tscn" id="1_ig7tw"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="UILayer" type="VBoxContainer" parent="."]
+layout_mode = 0
+
+[node name="top" parent="UILayer" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="bottom" parent="UILayer" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
