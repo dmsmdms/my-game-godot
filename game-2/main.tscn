@@ -1,25 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://6d1t46v0b22j"]
+[gd_scene load_steps=7 format=3 uid="uid://3lmqmfsi5mdk"]
 
-[ext_resource type="PackedScene" uid="uid://5khqtmuua7hj" path="res://sym.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://do2tcji5lw8y7" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://6d1t46v0b22j" path="res://ui.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://dcas4fhcf2la4" path="res://assets/player.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://j6lsw08x4b2a" path="res://player.gd" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://fk48pwen4wbd" path="res://platform.tscn" id="5_lquwl"]
 
-[node name="UI" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
 
-[node name="btc" parent="." instance=ExtResource("1_ig7tw")]
-layout_mode = 1
-metadata/sym = "btc"
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1bvp3")
 
-[node name="eth" parent="." instance=ExtResource("1_ig7tw")]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -960.0
-offset_bottom = 0.0
-grow_vertical = 0
-metadata/sym = "eth"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("1_ig7tw")]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(484, 1368)
+script = ExtResource("2_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 20)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Platform" parent="." instance=ExtResource("5_lquwl")]
+position = Vector2(483, 1567)
