@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://3lmqmfsi5mdk"]
+[gd_scene load_steps=8 format=3 uid="uid://3lmqmfsi5mdk"]
 
 [ext_resource type="Script" uid="uid://do2tcji5lw8y7" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://6d1t46v0b22j" path="res://ui.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dcas4fhcf2la4" path="res://assets/player.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://j6lsw08x4b2a" path="res://player.gd" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://fk48pwen4wbd" path="res://platform.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://chw2ftb8hi0ff" path="res://anim_signal.tscn" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
 
@@ -33,3 +34,6 @@ texture = ExtResource("2_0xm2m")
 
 [node name="Platform" parent="." instance=ExtResource("5_lquwl")]
 position = Vector2(483, 1567)
+
+[node name="Signal" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(476, 1699)

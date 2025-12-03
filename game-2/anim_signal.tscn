@@ -1,0 +1,141 @@
+[gd_scene load_steps=30 format=3 uid="uid://chw2ftb8hi0ff"]
+
+[ext_resource type="Texture2D" uid="uid://bk6geaidmf37w" path="res://assets/bear/bear_1.png" id="1_2fmoq"]
+[ext_resource type="Texture2D" uid="uid://cl68aqabcl8x3" path="res://assets/bear/bear_2.png" id="2_1ri53"]
+[ext_resource type="Texture2D" uid="uid://bcmk016adhmv8" path="res://assets/bear/bear_3.png" id="3_uedp3"]
+[ext_resource type="Texture2D" uid="uid://bs06q1ogqq0th" path="res://assets/bear/bear_4.png" id="4_o2bdj"]
+[ext_resource type="Texture2D" uid="uid://bhr6l57jj1jn6" path="res://assets/bear/bear_5 (Copy).png" id="5_kxvo5"]
+[ext_resource type="Texture2D" uid="uid://c0up7xjlki73f" path="res://assets/bear/bear_5.png" id="6_61ayr"]
+[ext_resource type="Texture2D" uid="uid://bi7rpq6xu633c" path="res://assets/bear/bear_6.png" id="7_o11aa"]
+[ext_resource type="Texture2D" uid="uid://m2n6kmkanred" path="res://assets/bear/bear_7.png" id="8_najv4"]
+[ext_resource type="Texture2D" uid="uid://n0cho4jonr3g" path="res://assets/bear/bear_8.png" id="9_s4hoo"]
+[ext_resource type="Texture2D" uid="uid://bqtfc8tj08sc7" path="res://assets/bear/bear_9.png" id="10_hhs5x"]
+[ext_resource type="Texture2D" uid="uid://df0vsab5rrulp" path="res://assets/bear/bear_10.png" id="11_mbnqa"]
+[ext_resource type="Texture2D" uid="uid://0m1w7fw3f7ra" path="res://assets/bear/bear_11.png" id="12_72cyi"]
+[ext_resource type="Texture2D" uid="uid://cmw0fes04ufq6" path="res://assets/bear/bear_12.png" id="13_vk2th"]
+[ext_resource type="Texture2D" uid="uid://b1m66jrvb3lkh" path="res://assets/bear/bear_13.png" id="14_k5v0n"]
+[ext_resource type="Texture2D" uid="uid://qnd8akk4rc88" path="res://assets/bull/bull_1.png" id="15_alwhs"]
+[ext_resource type="Texture2D" uid="uid://b6oecwfd40rcm" path="res://assets/bull/bull_2.png" id="16_7oacv"]
+[ext_resource type="Texture2D" uid="uid://mo4mqj4htctn" path="res://assets/bull/bull_3.png" id="17_vd2x2"]
+[ext_resource type="Texture2D" uid="uid://dnjmphlj6w1i1" path="res://assets/bull/bull_4.png" id="18_obvuv"]
+[ext_resource type="Texture2D" uid="uid://bn42kguh27l3u" path="res://assets/bull/bull_5.png" id="19_cdrrq"]
+[ext_resource type="Texture2D" uid="uid://cnt07nyrjgfa" path="res://assets/bull/bull_6.png" id="20_meh50"]
+[ext_resource type="Texture2D" uid="uid://b7js3wnoqom6v" path="res://assets/bull/bull_7.png" id="21_hbqyo"]
+[ext_resource type="Texture2D" uid="uid://fm4vpn576pqc" path="res://assets/bull/bull_8.png" id="22_b8xt7"]
+[ext_resource type="Texture2D" uid="uid://dbb4v2oiah26r" path="res://assets/bull/bull_9.png" id="23_h602o"]
+[ext_resource type="Texture2D" uid="uid://sxqu2gbtn1b6" path="res://assets/bull/bull_10.png" id="24_3lnk5"]
+[ext_resource type="Texture2D" uid="uid://2x0sh3turb51" path="res://assets/bull/bull_11.png" id="25_fl5qs"]
+[ext_resource type="Texture2D" uid="uid://b4fen4pjkeqgd" path="res://assets/bull/bull_12.png" id="26_0muxr"]
+[ext_resource type="Texture2D" uid="uid://co3xq0ypxineh" path="res://assets/bull/bull_13.png" id="27_bg1hm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fmoq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2fmoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1ri53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uedp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o2bdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kxvo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_61ayr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o11aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_najv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s4hoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hhs5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mbnqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_72cyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vk2th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k5v0n")
+}],
+"loop": true,
+"name": &"bear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_alwhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7oacv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vd2x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_obvuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cdrrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_meh50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hbqyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_b8xt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_h602o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3lnk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fl5qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0muxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bg1hm")
+}],
+"loop": true,
+"name": &"bull",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2fmoq"]
+font_size = 30
+
+[node name="Signal" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(346, -1)
+sprite_frames = SubResource("SpriteFrames_2fmoq")
+animation = &"bull"
+
+[node name="Msg" type="Label" parent="."]
+offset_left = -67.0
+offset_top = -22.0
+offset_right = 173.0
+offset_bottom = 20.0
+text = "Get Signal PUMP"
+label_settings = SubResource("LabelSettings_2fmoq")
