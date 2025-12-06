@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://fk48pwen4wbd"]
 
-[ext_resource type="Script" uid="uid://dnxvbd8rao4uy" path="res://platform.gd" id="1_mi635"]
-[ext_resource type="PackedScene" uid="uid://cembr0ro0u5pb" path="res://triangle.tscn" id="2_s8bxr"]
+[ext_resource type="Script" uid="uid://dnxvbd8rao4uy" path="res://scripts/platform.gd" id="1_nlgqw"]
+[ext_resource type="PackedScene" uid="uid://cembr0ro0u5pb" path="res://scenes/triangle.tscn" id="2_507ja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi635"]
 size = Vector2(200, 25)
@@ -14,7 +14,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="Platform" type="StaticBody2D"]
-script = ExtResource("1_mi635")
+script = ExtResource("1_nlgqw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_mi635")
@@ -34,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mi635")
 
-[node name="Triangle" parent="." instance=ExtResource("2_s8bxr")]
+[node name="Triangle" parent="." instance=ExtResource("2_507ja")]
 position = Vector2(0, -55)
 
 [editable path="Triangle"]

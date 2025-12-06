@@ -1,6 +1,6 @@
 extends Node2D
 
-const PLATORM := preload("res://platform.tscn")
+const PLATORM := preload("res://scenes/platform.tscn")
 const PLATFORM_COUNT := 8
 const COLOR_CHANGE_SPEED := 2.0
 const COLOR_RED = Color("#f8566b")

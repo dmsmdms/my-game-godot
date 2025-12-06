@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://6d1t46v0b22j"]
+[gd_scene load_steps=3 format=3 uid="uid://6d1t46v0b22j"]
 
-[ext_resource type="PackedScene" uid="uid://5khqtmuua7hj" path="res://sym.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://5khqtmuua7hj" path="res://scenes/sym.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://barejepuw7fva" path="res://scripts/ui.gd" id="1_yev5y"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -9,10 +10,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yev5y")
 
 [node name="btc" parent="." instance=ExtResource("1_ig7tw")]
 layout_mode = 1
 metadata/sym = "btc"
+
+[node name="stars" parent="btc" index="1"]
+visible = true
 
 [node name="eth" parent="." instance=ExtResource("1_ig7tw")]
 layout_mode = 1

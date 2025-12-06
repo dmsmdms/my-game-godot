@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cembr0ro0u5pb"]
 
-[ext_resource type="Script" uid="uid://da0vwhidl34so" path="res://triangle.gd" id="1_4roi2"]
-[ext_resource type="Texture2D" uid="uid://bcgmc6a5yhu5a" path="res://assets/arrow.png" id="1_idvkf"]
+[ext_resource type="Script" uid="uid://da0vwhidl34so" path="res://scripts/triangle.gd" id="1_h7xi0"]
+[ext_resource type="Texture2D" uid="uid://bcgmc6a5yhu5a" path="res://assets/arrow.png" id="2_u1wel"]
 
 [sub_resource type="Gradient" id="Gradient_4roi2"]
 colors = PackedColorArray(0.96862745, 0.5764706, 0.101960786, 1, 0.96862745, 0.17254902, 0.101960786, 1)
@@ -11,16 +11,16 @@ size = Vector2(32, 23.5)
 
 [node name="Triangle" type="Area2D" groups=["enemy"]]
 scale = Vector2(2, 2)
-script = ExtResource("1_4roi2")
+script = ExtResource("1_h7xi0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.96862745, 0.5764706, 0.101960786, 1)
-texture = ExtResource("1_idvkf")
+texture = ExtResource("2_u1wel")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 emitting = false
 amount = 16
-texture = ExtResource("1_idvkf")
+texture = ExtResource("2_u1wel")
 lifetime = 0.4
 one_shot = true
 explosiveness = 0.7
