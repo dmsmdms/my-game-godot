@@ -1,28 +1,41 @@
 extends Node2D
 
 const PLATORM := preload("res://platform.tscn")
-const MIN_DIST := Vector2(0.0, 150.0)
-const MAX_DIST := Vector2(400.0, 500.0)
-const INIT_PLATFORM_COUNT := 10
+const PLATFORM_COUNT := 8
+const PLATFROM_DIST_X := 250.0
+const PLATFROM_BASE_Y := 1400.0
+const COLOR_CHANGE_SPEED := 2.0
+const COLOR_RED = Color("#f8566b")
+const COLOR_GREEN = Color("#27bb99")
 
-@onready var view_size := get_viewport_rect().size
-@onready var start_platform: StaticBody2D = $Platform
-@onready var last_spawn_pos := start_platform.position
+@onready var player_rect: Panel = $Player/ColorRect
 
-func _on_screen_exit() -> void:
-	add_platform()
-
-func add_platform() -> void:
-	var platform := PLATORM.instantiate()
-	var notifier: VisibleOnScreenNotifier2D = platform.get_node("ScreenNotifier")
-	notifier.screen_exited.connect(_on_screen_exit)
-	
-	var x_dir: float = [-1.0, 1.0].pick_random()
-	last_spawn_pos.x -= x_dir * randf_range(MIN_DIST.x, MAX_DIST.x)
-	last_spawn_pos.y -= randf_range(MIN_DIST.y, MAX_DIST.y)
-	platform.position = last_spawn_pos
-	add_child(platform)
+var color := Color.WHITE
+var dst_color := Color.WHITE
+var platforms := []
 
 func _ready() -> void:
-	for i in range(INIT_PLATFORM_COUNT):
-		add_platform()
+	var last_pos := Vector2.ZERO
+	for i in range(PLATFORM_COUNT):
+		var platform := PLATORM.instantiate()
+		last_pos.x += PLATFROM_DIST_X
+		last_pos.y = PLATFROM_BASE_Y
+		platform.position = last_pos
+		platforms.push_back(platform)
+		add_child(platform)
+
+func _process(delta: float) -> void:
+	if dst_color != color:
+		color = lerp(color, dst_color, delta * COLOR_CHANGE_SPEED)
+
+		var sb: StyleBoxFlat = player_rect.get_theme_stylebox("panel")
+		sb.bg_color = color
+		player_rect.add_theme_stylebox_override("panel", sb)
+
+		for i in range(PLATFORM_COUNT):
+			var rect: ColorRect = platforms[i].get_node("ColorRect")
+			rect.color = color
+
+func _on_kdata_ready(kdata: Array) -> void:
+	var k: Dictionary = kdata[-1]
+	dst_color = COLOR_RED if k["c"] < k["o"] else COLOR_GREEN

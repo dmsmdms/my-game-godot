@@ -1,5 +1,7 @@
 extends TextureRect
 
+signal kdata_ready
+
 const color_red = Color("#f8566b")
 const color_green = Color("#27bb99")
 const sym_text = {
@@ -63,6 +65,8 @@ func _price_to_y(price: float, min_p: float, max_p: float, chart_h: float) -> fl
 	return (1.0 - t) * chart_h
 
 func _draw_kline() -> void:
+	kdata_ready.emit(kdata)
+
 	var min_p = 1e18
 	var max_p = -1e18
 	for c in kdata:

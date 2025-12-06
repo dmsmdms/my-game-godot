@@ -1,16 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://3lmqmfsi5mdk"]
+[gd_scene load_steps=4 format=3 uid="uid://3lmqmfsi5mdk"]
 
 [ext_resource type="Script" uid="uid://do2tcji5lw8y7" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://6d1t46v0b22j" path="res://ui.tscn" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://dcas4fhcf2la4" path="res://assets/player.png" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://j6lsw08x4b2a" path="res://player.gd" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://fk48pwen4wbd" path="res://platform.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://chw2ftb8hi0ff" path="res://anim_signal.tscn" id="6_7mycd"]
-[ext_resource type="Texture2D" uid="uid://ctuj2g6xm5w7y" path="res://assets/left.png" id="7_kek77"]
-[ext_resource type="Texture2D" uid="uid://crw3lelyklygi" path="res://assets/jump.png" id="8_4c57u"]
-[ext_resource type="Texture2D" uid="uid://dqpq1hqyafg3g" path="res://assets/right.png" id="9_efxa6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bwfgwl7mtvwfa" path="res://player.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_1bvp3")
@@ -20,46 +12,11 @@ layer = -1
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("1_ig7tw")]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(484, 1368)
-script = ExtResource("2_h2yge")
+[node name="Player" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(600, 1200)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(2, -122)
-scale = Vector2(6, 6)
-shape = SubResource("RectangleShape2D_ig7tw")
+[connection signal="kdata_ready" from="CanvasLayer/UI/btc" to="." method="_on_kdata_ready"]
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(4, -144)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_0xm2m")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-
-[node name="Platform" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(501, 1395)
-
-[node name="Signal" parent="." instance=ExtResource("6_7mycd")]
-visible = false
-position = Vector2(476, 1699)
-
-[node name="Input" type="CanvasLayer" parent="."]
-
-[node name="left" type="TouchScreenButton" parent="Input"]
-position = Vector2(42, 1540)
-texture_normal = ExtResource("7_kek77")
-visibility_mode = 1
-
-[node name="jump" type="TouchScreenButton" parent="Input"]
-position = Vector2(413, 1547)
-texture_normal = ExtResource("8_4c57u")
-visibility_mode = 1
-
-[node name="right" type="TouchScreenButton" parent="Input"]
-position = Vector2(776, 1541)
-texture_normal = ExtResource("9_efxa6")
-visibility_mode = 1
-
-[connection signal="pressed" from="Input/left" to="Player" method="_on_left_pressed"]
-[connection signal="pressed" from="Input/jump" to="Player" method="_on_jump_pressed"]
-[connection signal="pressed" from="Input/right" to="Player" method="_on_right_pressed"]
+[editable path="CanvasLayer/UI"]
+[editable path="CanvasLayer/UI/btc"]
+[editable path="Player"]
