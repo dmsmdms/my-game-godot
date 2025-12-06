@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwfgwl7mtvwfa"]
+[gd_scene load_steps=5 format=3 uid="uid://bwfgwl7mtvwfa"]
 
 [ext_resource type="Script" uid="uid://j6lsw08x4b2a" path="res://player.gd" id="1_4flbx"]
 
@@ -11,6 +11,8 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_4flbx")
@@ -31,3 +33,9 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4flbx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(50, 40)
+shape = SubResource("RectangleShape2D_4flbx")

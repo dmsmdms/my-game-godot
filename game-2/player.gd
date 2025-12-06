@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const POS_Y_START := 1200.0
+const POS_Y_START := 1000.0
 const POS_Y_LOW := 2000.0
 const JUMP_VELOCITY_MIN := -600.0
 const JUMP_VELOCITY_MAX := -1800.0

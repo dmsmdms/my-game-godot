@@ -21,6 +21,11 @@ window/size/viewport_height=1920
 window/stretch/mode="viewport"
 window/handheld/orientation=1
 
+[global_group]
+
+bullet=""
+enemy=""
+
 [input]
 
 jump={

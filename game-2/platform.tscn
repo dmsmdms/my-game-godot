@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://fk48pwen4wbd"]
+[gd_scene load_steps=5 format=3 uid="uid://fk48pwen4wbd"]
 
 [ext_resource type="Script" uid="uid://dnxvbd8rao4uy" path="res://platform.gd" id="1_mi635"]
+[ext_resource type="PackedScene" uid="uid://cembr0ro0u5pb" path="res://triangle.tscn" id="2_s8bxr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi635"]
 size = Vector2(200, 25)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mi635"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Platform" type="StaticBody2D"]
 script = ExtResource("1_mi635")
@@ -12,7 +20,7 @@ script = ExtResource("1_mi635")
 shape = SubResource("RectangleShape2D_mi635")
 one_way_collision = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="Panel" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -24,3 +32,9 @@ offset_right = 100.0
 offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mi635")
+
+[node name="Triangle" parent="." instance=ExtResource("2_s8bxr")]
+position = Vector2(0, -55)
+
+[editable path="Triangle"]
